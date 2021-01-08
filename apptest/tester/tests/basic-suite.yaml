@@ -1,18 +1,18 @@
 actions:
 - name: Site address should be 200 OK
   bashTest:
-    script: curl -H "Host: {{.Values.appURL}}" http://${EXTERNAL_IP}
+    script: curl -k "https://${EXTERNAL_IP}"
     expect:
       stdout:
-        contains: 'Web Server Application'
+        contains: 'Nginx'
       exitCode:
         equals: 0
 - name: Site address (SSL) should be 200 OK
   bashTest:
-    script: curl -H "Host: {{.Values.appURL}}" https://${EXTERNAL_IP}
+    script: curl -k "https://${EXTERNAL_IP}"
     expect:
       stdout:
-        contains: 'Web Server Application'
+        contains: 'Nginx'
       exitCode:
         equals: 0
 
