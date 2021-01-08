@@ -109,11 +109,11 @@ properties:
     description: "Insert your token from CloudGuard AppSec Portal App Token here"
   appURL:
     type: string
-    default: "myapp.mycompany.com"
+    default: "juice-shop.checkpoint.com"
     description: "Your Application URL"
   mysvcname:
     type: string
-    default: "myapp"
+    default: "juice-shop"
     description: "Your applicaiton service name"
   mysvcport:
     type: string
