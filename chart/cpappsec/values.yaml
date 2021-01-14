@@ -11,10 +11,10 @@ nanoToken: "insert your token here"
 image:
   cpappsecnginxingress:
     repository: gcr.io/cgconnect/cpappsec/cpappsecnginxingress
-    tag: 0.1.2
+    tag: 0.1
   cpappsecnanoagent:
     repository: gcr.io/cgconnect/cpappsec/cpappsecnanoagent
-    tag: 0.1.2
+    tag: 0.1
   nginxCtlCpRepo: "checkpoint/cpappsec-nginx-ingress"
   cpRepo: "checkpoint/cpappsec-nano-agent"
 
