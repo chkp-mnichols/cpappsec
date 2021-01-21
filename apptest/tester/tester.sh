@@ -17,7 +17,7 @@
 set -xeo pipefail
 shopt -s nullglob
 
-EXTERNAL_IP="$(kubectl get svc cpappsec-cp-ingress-ctl-svc  \
+EXTERNAL_IP="$(kubectl get svc ${APP_INSTANCE_NAME}-cp-ingress-ctl-svc  \
     --namespace ${NAMESPACE} \
     --output jsonpath='{.spec.clusterIP}')"
 
