@@ -13,7 +13,7 @@ metadata:
 spec:
   descriptor:
     type: cpappsec
-    version: "0.1.2"
+    version: "0.1.143785"
   selector:
     matchLabels:
       app.kubernetes.io/name: {{.Release.Name}}
@@ -23,6 +23,10 @@ spec:
     kind: Secret
   - group: v1
     kind: Service
+  - group: v1
+    kind: ConfigMap
+  - group: v1
+    kind: ServiceAccount
   - group: apps
     kind: Deployment
   - group: ''
