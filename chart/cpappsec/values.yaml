@@ -1,30 +1,30 @@
-# Default values for juice-chart.
+# Default values for using this helm chart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 #Values for CloudGuard AppSec Nano Agent in Nginx Ingress Controller
-nanoToken: "insert your token here"
+nanoToken: "12345abc-a5fa-40b4-9c9a-b8dabde8956d-63f91f9b-d4a8-4bc0-b81a-e472d649f781"
+appURL: "myapp.mycompany.com"
+mysvcname: "myapp"
+mysvcport: "80"
 
 #
 image:
   cpappsecnginxingress:
     repository: gcr.io/cgconnect/cpappsec/cpappsecnginxingress
-    tag: 0.1
+    tag: 0.1.143785
   cpappsecnanoagent:
     repository: gcr.io/cgconnect/cpappsec/cpappsecnanoagent
-    tag: 0.1
+    tag: 0.1.143785
   nginxCtlCpRepo: "checkpoint/cpappsec-nginx-ingress"
   cpRepo: "checkpoint/cpappsec-nano-agent"
 
 imagePullSecrets: []
-appURL: "myapp.mycompany.com"
-mysvcname: "myapp"
-mysvcport: "8080"
 
 controller:
-  serviceAccount: cpappsec-operatorserviceaccount
+  operatorServiceAccount: cpappsec-operatorserviceaccount
 
 podAnnotations: {}
 
