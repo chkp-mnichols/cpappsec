@@ -8,7 +8,7 @@ x-google-marketplace:
 
   # The release version is required in the schema and MUST match the
   # release tag on the the deployer.
-  publishedVersion: '0.1'
+  publishedVersion: '0.1.143785'
   publishedVersionMetadata:
     releaseNote: >-
       Initial release.
@@ -105,15 +105,15 @@ properties:
           base64EncodedCertificate: TLS_CERTIFICATE_CRT
   nanoToken:
     type: string
-    default: "034fdix39-xxx"
+    default: "15741c8e-a5fa-40b4-9c9a-b8dabde8956d-63f91f9b-d4a8-4bc0-b81a-e472d649f781"
     description: "Insert your token from CloudGuard AppSec Portal App Token here"
   appURL:
     type: string
-    default: "cpappsec-cp-ingress-ctl-svc.mycompany.com"
+    default: "myapp.mycompany.com"
     description: "Your Application URL"
   mysvcname:
     type: string
-    default: "cpappsec-cp-ingress-ctl-svc"
+    default: "myapp"
     description: "Your applicaiton service name"
   mysvcport:
     type: string
@@ -127,3 +127,4 @@ required:
 - appURL
 - mysvcname
 - mysvcport
+
