@@ -1,6 +1,6 @@
 # Check Point CloudGuard AppSec
 ## Overview
-Check Point CloudGuard AppSec delivers access control and advanced threat prevention including web and api protection for mission-critical assets.  Check Point CloudGuard AppSec delivers advanced, multi-layered threat prevention to protect customer assets in Kubernetes clusters from web attacks and sophisticated threats.
+Check Point CloudGuard AppSec delivers access control and advanced threat prevention including web and api protection for mission-critical assets.  Check Point CloudGuard AppSec delivers advanced, multi-layered threat prevention to protect customer assets in Kubernetes clusters from web attacks and sophisticated threats based on Contextual AI.
 
 Helm charts provide the ability to deploy a collection of kubernetes services and containers with a single command. This helm chart deploys an ingress controller integrated with the Check Point container images that include Check Point CloudGuard AppSec nano agent. If you want to integrate the Check Point CloudGuard AppSec nano agent with an ingress controller other than nginx, follow the instructions in the AppSec installation guide. Another option would be to download the helm chart and modify the parameters to match your Kubernetes/Application environment.
 
@@ -157,6 +157,10 @@ helm template chart/cpappsec \
   --namespace "$NAMESPACE" \
   --set cpappsec.image.repo="$IMAGE_CPAPPSEC" \
   --set cpappsec.image.tag="$TAG" \
+  --set cpappsec.nanoToken="Your nanoToken" \
+  --set cpappsec.appURL="Your Application URL" \
+  --set cpappsec.mysvcname="Your Service Name" \
+  --set cpappsec.mysvcport="Your Service Port" \
   --set tls.base64EncodedPrivateKey="$TLS_CERTIFICATE_KEY" \
   --set tls.base64EncodedCertificate="$TLS_CERTIFICATE_CRT" \
   > "${APP_INSTANCE_NAME}_manifest.yaml"
